@@ -1,0 +1,37 @@
+下面举例找出100中的所有奇数
+一：
+int main()
+{
+	int a = 1;
+	while (a <= 100)
+	{
+		if (a % 2 == 1)
+			printf("%d ", a);
+		a++;
+	}
+		return 0;
+}
+二：
+int main()
+{
+	int a = 1;
+	while (a % 2 == 1 && a <= 100)
+	{
+		printf("%d ", a);
+		a += 2;
+	}
+		
+	return 0;
+}
+三：
+int main()
+{
+	int a = 1;
+	while (a <= 100)
+	{
+		printf("%d ", a);
+		a += 2;
+	}
+
+	return 0;
+}
