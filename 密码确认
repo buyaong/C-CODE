@@ -1,0 +1,25 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+int main()
+{
+	int ch = 0;
+	int ret = 0;
+	char password[20] = { 0 };
+	printf("请输入密码：");
+	scanf("%s" ,password);//输出密码 并存放在password数组中 此时输入缓冲区除了有密码还有\n
+	//需要把缓冲区\n读取走 
+	//但为保证任何情况下缓冲区都为空白以方便下面程序的进行 需要一组循环函数
+	while ((ch=getchar())!='\n')//易错 记住循环特点
+	{
+		;
+	}
+	printf("请输入（Y/N)");
+	ret = getchar();
+	if (ret == 'Y')
+	{
+		printf("输入成功");
+	}
+	else
+		printf("输入失败");
+	return 0;
+}
