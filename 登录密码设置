@@ -1,0 +1,23 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	char password[] = { 0 };
+	int i = 0;
+	printf("请输入密码:");
+	for (i = 0; i < 3; i++)
+	{
+		scanf("%s", password);
+		if (strcmp(password, "12345678") == 0)
+		{
+			printf("登录成功\n");
+			break;
+		}
+		else
+			printf("登录失败\n");
+	}
+	if (i == 3)
+		printf("失败多次，已返回");
+	return 0;
+}
